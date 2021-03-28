@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Brick Crush Game | Have Fun!</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+	<div id="click-audio-wrapper">
+        <audio controls="controls" id="audio">
+            <source src="audio/click-sound.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div id="winner-audio-wrapper">
+        <audio controls="controls" id="audio2">
+            <source src="audio/game-win-sound.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+        </audio>
+	</div>
+	
+    <div id="loser-audio-wrapper">
+        <audio controls="controls" id="audio3">
+            <source src="audio/game-lose-sound.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+        </audio>
+    </div>
+
+	<div id="game-paused">
+		<div id="game-paused-content">
+			<div>
+				<h1>Game Is Paused!</h1>
+				<br>
+				<button onclick="resumeGame()">Resume Game</button>
+			</div>
+			
+		</div>
+	</div>
+
+	<div id="game-won-overlay"></div>
+	<div id="game-won-content">
+		<h1>Yay!, You Have Won</h1>
+		<h3>Score: <span id="score-win"></span></h3>
+		<button type="button" id="restartBtn" onclick="restartGame()">Restart</button>
+	</div>
+
+	<div id="overlay"></div>
+	<div id="overlay-content">
+		<div>
+			<h1>Game Over!!!</h1>
+			<h2>YOUR SCORE IS: <span id="display-score"></span></h2>
+			<br>
+			<button type="button" id="restartBtn" onclick="restartGame()">Restart</button>
+		</div>
+	</div>
+
+	<canvas></canvas>
+
+	<div id="score-wrapper">
+
+		<h1>Score: <span id="score"></span></h1>
+		<div>
+			<h4><span>left:</span> ArrowLeft</h4>
+			<h4><span>right:</span> ArrowRight</h4>
+			<h4><span>Pause game:</span> press p</h4>
+		</div>
+		
+		
+	</div>
+	
+
+	
+
+	<script src="canvas.js"></script>
+</body>
+</html>
